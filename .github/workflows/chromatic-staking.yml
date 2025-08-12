@@ -19,7 +19,7 @@ jobs:
       requireChromaticCheck: ${{ steps.diffcheck.outputs.requireChromaticCheck }}
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           fetch-depth: 0
 
@@ -37,7 +37,7 @@ jobs:
     steps:
       - name: Checkout repository
         if: ${{ needs.check-if-should-run.outputs.requireChromaticCheck == 1 }}
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           fetch-depth: 0
 
